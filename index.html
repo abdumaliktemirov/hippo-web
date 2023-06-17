@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hippo</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,9 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -25,18 +27,60 @@
     <div class="wrapper">
 
 
-
         <!-- Header seris start -->
         <header id="header">
             <div class="container">
                 <div class="header-wrap">
                     <div class="header-wrap__log">
+                        <div class="header-wrap__bars">
+                            <label class="header-label__bars" for="menu-open__bars">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                        </div>
                         <a href="#">
                             <img src="./img/log/header-main.svg" alt="header-log">
                         </a>
                     </div>
-                    <nav class="header-nav">
-                        <ul class="header-items">
+                    <div class="header-wrap__right">
+                        <nav class="header-nav">
+                            <ul class="header-items">
+                                <li class="header-item">
+                                    <a href="#!">Главная</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="#!">О нас</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="#!">Продукты </a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="#!">Контакты</a>
+                                </li>
+                                <select class="header-select">
+                                    <option value="RU">RU</option>
+                                    <option value="UZ">UZ</option>
+                                </select>
+                            </ul>
+                        </nav>
+                        <div class="header-Registration">
+                            <a href="#!">Регистрация</a>
+                            <button>Войти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <input type="checkbox" id="menu-open__bars" hidden>
+
+        <div class="header-mobile">
+            <div class="container">
+                <div class="header-mobile__burger">
+                    <label class="header-label__x" for="menu-open__bars">
+                        <i class="fa-solid fa-x"></i>
+                    </label>
+                    <nav class="header-mobile-nav">
+                        <ul class="header-items bars-menyu">
                             <li class="header-item">
                                 <a href="#!">Главная</a>
                             </li>
@@ -49,19 +93,20 @@
                             <li class="header-item">
                                 <a href="#!">Контакты</a>
                             </li>
-                            <select class="header-select">
+                            <select class="header-select header-mobile__select">
                                 <option value="RU">RU</option>
                                 <option value="UZ">UZ</option>
                             </select>
                         </ul>
                     </nav>
-                    <div class="header-Registration">
+                    <div class=" header-registration__reg">
                         <a href="#!">Регистрация</a>
                         <button>Войти</button>
                     </div>
                 </div>
             </div>
-        </header>
+
+        </div>
         <!-- Header seris end -->
 
         <!-- Warehouse seris start -->
@@ -77,8 +122,7 @@
                                     </div>
                                     <div class="werehouse-seris__text">
                                         <p>Касса, учет, работа с клиентами и персоналом, анализ продаж, склад и многое
-                                            другое в
-                                            одной системе</p>
+                                            другое в одной системе</p>
                                     </div>
                                     <div class="werehouse-seris__btn">
                                         <button>Попробовать</button>
@@ -299,18 +343,20 @@
                 <div class="middle-wrap">
                     <!-- Integration card -->
                     <div class="integration-wrap">
-                        <div class="integration-wrap__img">
+                        <div class="integration-wrap__img medya-img">
                             <img src="./img/Integration-img.png" alt="integration-img">
                         </div>
                         <div class="integration-wrap__info">
                             <div class="integration-info__warp">
                                 <h4 class="integration-info__name">E-POS</h4>
-                                <h1 class="integration-info__title">Интеграция POS терминала с налоговой</h1>
-                                <p class="integration-info__text">Чек, который вы создали через E-POS, регистрируется на
+                                <h1 class="integration-info__title medya-title">Интеграция POS терминала с налоговой
+                                </h1>
+                                <p class="integration-info__text medya-text">Чек, который вы создали через E-POS,
+                                    регистрируется на
                                     сервере налоговой и ему автоматически присваивается фискальный номер.</p>
                             </div>
                             <div class="integration-info__buttons">
-                                <button class="integration-btn">Попробовать</button>
+                                <button class="integration-btn hippo-btn">Попробовать</button>
                                 <button class="integration-btn2">Подробнее</button>
                             </div>
                         </div>
@@ -322,18 +368,19 @@
                         <div class="trade-wrap__info">
                             <div class="trade-info__warp">
                                 <h4 class="trade-info__name">Склад</h4>
-                                <h1 class="trade-info__title">Автоматизация Торговли,
+                                <h1 class="trade-info__title medya-title">Автоматизация Торговли,
                                     Складского учета и
                                     Производства</h1>
-                                <p class="trade-info__text">Касса, учет, работа с клиентами и персоналом, анализ
+                                <p class="trade-info__text medya-text">Касса, учет, работа с клиентами и персоналом,
+                                    анализ
                                     продаж, склад и многое другое в одной системе</p>
                             </div>
                             <div class="trade-info__buttons">
-                                <button class="trade-btn">Попробовать</button>
+                                <button class="trade-btn hippo-btn">Попробовать</button>
                                 <button class="trade-btn2">Подробнее</button>
                             </div>
                         </div>
-                        <div class="trade-wrap__img">
+                        <div class="trade-wrap__img medya-img">
                             <img src="./img/Integration-img2.png" alt="integration-img">
                         </div>
                     </div>
@@ -341,20 +388,20 @@
 
                     <!-- Networks card -->
                     <div class="networks-wrap">
-                        <div class="networks-wrap__img">
+                        <div class="networks-wrap__img medya-img">
                             <img src="./img/edo.png" alt="integration-img">
                         </div>
                         <div class="networks-wrap__info">
                             <div class="networks-info__warp">
                                 <h4 class="networks-info__name">EDI</h4>
-                                <h1 class="networks-info__title">ЭДО для работы с
+                                <h1 class="networks-info__title medya-title">ЭДО для работы с
                                     торговыми сетями</h1>
-                                <p class="networks-info__text">Сервис для электронного обмена документов и
+                                <p class="networks-info__text medya-text">Сервис для электронного обмена документов и
                                     сообщений между поставщиками и заказчиками в
                                     эдином окне</p>
                             </div>
                             <div class="networks-info__buttons">
-                                <button class="networks-btn">Попробовать</button>
+                                <button class="networks-btn hippo-btn">Попробовать</button>
                                 <button class="networks-btn2">Подробнее</button>
                             </div>
                         </div>
@@ -366,15 +413,16 @@
                         <div class="playground-wrap__info">
                             <div class="playground-info__warp">
                                 <h4 class="playground-info__name">E-POS</h4>
-                                <h1 class="playground-info__title">Интеграция POS терминала с налоговой</h1>
-                                <p class="playground-info__text">Чек, который вы создали через E-POS, регистрируется на
+                                <h1 class="playground-info__title medya-title">Интеграция POS терминала с налоговой</h1>
+                                <p class="playground-info__text medya-text">Чек, который вы создали через E-POS,
+                                    регистрируется на
                                     сервере налоговой и ему автоматически присваивается фискальный номер.</p>
                             </div>
                             <div class="playground-info__buttons">
                                 <button class="playground-btn__scors">Скоро</button>
                             </div>
                         </div>
-                        <div class="playground-wrap__img">
+                        <div class="playground-wrap__img medya-img">
                             <img src="./img/market.png" alt="integration-img">
                         </div>
                     </div>
@@ -446,48 +494,19 @@
         </footer>
         <!-- Footer seris end -->
 
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
+    <!-- js -->
+    <script src="./js/main.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-            },
-        });
-
-        var swiper2 = new Swiper(".mySwiper2", {
-            slidesPerView: '6',
-            spaceBetween: 30,
-            loop: true,
-            autoplay: true,
-        });
+        window.replainSettings = { id: '4ca2b9d9-3584-4169-b12d-196181e283e0' };
+        (function (u) {
+            var s = document.createElement('script'); s.async = true; s.src = u;
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })('https://widget.replain.cc/dist/client.js');
     </script>
-
 </body>
 
 </html>

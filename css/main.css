@@ -37,19 +37,29 @@ body {
     display: flex;
     padding: 40px 0 40px 0;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header-wrap__log {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .header-wrap__log a {
     cursor: pointer;
 }
 
-.header-nav {
-    margin: 0 100px 0 340px;
+.header-wrap__right {
+    display: flex;
+    align-items: center;
+    gap: 100px;
 }
 
 .header-items {
     display: flex;
-    gap: 32px;
+    gap: 30px;
+    align-items: center;
 }
 
 .header-item a {
@@ -101,12 +111,100 @@ body {
     color: #FFFFFF;
 }
 
+/* bars */
+.header-mobile {
+    position: fixed;
+    background: rgb(66, 186, 250);
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    padding-top: 50px;
+    left: -100%;
+    top: 0;
+}
+
+#menu-open__bars:checked+.header-mobile {
+    left: 0;
+}
+
+.bars-menyu {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.header-label__bars i {
+    font-size: 25px;
+    font-size: larger;
+    display: none;
+    cursor: pointer;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: start;
+}
+
+.header-label__x {
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-mobile__select {
+    background: rgba(66, 185, 250, 0.85);
+    border: none;
+    color: #FFf;
+    width: 100px;
+    border: 1px solid #fff;
+}
+
+.bars-menyu a {
+    color: #FFF;
+}
+
+.header-select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.header-registration__reg {
+    left: 0;
+}
+
+.header-registration__reg a {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #fff;
+    margin-right: 24px;
+}
+
+.header-registration__reg button {
+    width: 118.47px;
+    height: 50px;
+    background: #025AB1;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+/* bars */
+
 /* Herader seris end */
 
 
 /* Warehouse seris start */
 .werehouse-wrap {
     display: flex;
+    padding: 0 20px;
 }
 
 .werehouse-wrap__left {
@@ -165,11 +263,12 @@ body {
 
 /* Client seris start */
 #client {
-    margin-top: 180px;
+    margin-top: 120px;
 }
 
 .client-wrap {
     display: flex;
+    align-items: center;
 }
 
 .client-title {
@@ -240,15 +339,38 @@ body {
     margin-bottom: 15px;
 }
 
-.integration-btn {
+.hippo-btn {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
     width: 191.09px;
     height: 61px;
-    background: #F0F7FD;
     border-radius: 10px;
     margin-right: 20px;
+    color: #71BEF5;
+    background: #F0F7FD;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.hippo-btn:hover {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    width: 191.09px;
+    height: 61px;
+    border-radius: 10px;
+    margin-right: 20px;
+    color: #fff;
+    background: #34A3F1;
+    box-shadow: 0 0 40px rgba(74, 87, 230, 0.3);
+
 }
 
 .integration-btn2 {
+    cursor: pointer;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
@@ -264,7 +386,7 @@ body {
 .trade-wrap {
     display: flex;
     align-items: center;
-    margin-top: 170px;
+    margin-top: 100px;
     justify-content: space-between;
 
 }
@@ -298,15 +420,8 @@ body {
     margin-bottom: 15px;
 }
 
-.trade-btn {
-    width: 191.09px;
-    height: 61px;
-    background: #F0F7FD;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
 .trade-btn2 {
+    cursor: pointer;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
@@ -356,15 +471,9 @@ body {
     margin-bottom: 15px;
 }
 
-.networks-btn {
-    width: 191.09px;
-    height: 61px;
-    background: #F0F7FD;
-    border-radius: 10px;
-    margin-right: 20px;
-}
 
 .networks-btn2 {
+    cursor: pointer;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
@@ -488,10 +597,9 @@ body {
     outline: none;
 }
 
-
 .forma-info label {
     border-bottom: 2px #D4D4D4 solid;
-    width: 430.39px;
+    max-width: 430.39px;
 }
 
 .forma-button a {
@@ -503,6 +611,11 @@ body {
     font-size: 15px;
     line-height: 18px;
     color: #FFFFFF;
+    transition: 0.4s;
+}
+
+.forma-button a:hover {
+    box-shadow: 0 0 20px rgba(74, 87, 230, 0.3);
 }
 
 .forma-wrap__forma {
@@ -597,3 +710,106 @@ body {
 }
 
 /* Forma seris end */
+
+
+
+
+
+/*@@@@@@@@ Mediya @@@@@@@@@@*/
+
+@media(max-width:1150px) {
+    .werehouse-wrap__right {
+        display: none;
+    }
+}
+
+@media (max-width:1050px) {
+    #header {
+        padding: 0 20px;
+    }
+
+    .header-label__bars i {
+        display: block;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-mobile {
+        padding: 40px 20px;
+    }
+
+    .header-registration__reg {
+        display: none;
+    }
+
+    .integration-wrap,
+    .trade-wrap,
+    .networks-wrap,
+    .playground-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .forma-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .forma-wrap__forma {
+        height: 400px;
+    }
+}
+
+@media(max-width:800px) {
+    .medya-title {
+        max-width: 300px;
+    }
+
+    .medya-text {
+        max-width: 200px;
+    }
+
+    .medya-img img {
+        max-width: 400px;
+    }
+
+    .hippo-skladi__logo img {
+        width: 600px;
+    }
+ 
+}
+
+@media (max-width:650px) {
+    .hippo-skladi__logo img {
+        width: 400px;
+    }
+
+    .forma-wrap__forma {
+        height: 400px;
+    }
+}
+
+@media (max-width:500px) {
+    .header-Registration {
+        display: none;
+    }
+
+    .header-registration__reg {
+        display: block;
+    }
+
+    .werehouse-seris__title h1 {
+        max-width: 300px;
+    }
+
+    .werehouse-seris__text p {
+        max-width: 400px;
+    }
+
+    .hippo-skladi__logo img {
+        max-width: 300px;
+    }
+}
